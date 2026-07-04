@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OVERVUE LLC | Glazing Installment Specialists NC</title>
+    <style>
+        :root {
+            --bg-dark: #0a0a0c;
+            --accent-blue: #00f2ff;
+            --accent-orange: #ff5e00;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.125);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+
+        body {
+            background-color: var(--bg-dark);
+            color: #fff;
+            overflow-x: hidden;
+            background: radial-gradient(circle at top right, #1a1a2e, #0a0a0c);
+        }
+
+        /* Abstract background shapes for Glassmorphism effect */
+        .blob {
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            background: var(--accent-blue);
+            filter: blur(120px);
+            border-radius: 50%;
+            opacity: 0.15;
+            z-index: -1;
+            top: -100px;
+            right: -100px;
+        }
+
+        .glass-nav {
+            position: fixed;
+            top: 0; width: 100%;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--glass-border);
+            z-index: 1000;
+        }
+
+        .logo { font-weight: 900; font-size: 1.8rem; letter-spacing: 4px; color: var(--accent-blue); }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 10%;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            line-height: 1;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero span { color: var(--accent-orange); }
+
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 40px;
+            margin-top: 20px;
+            max-width: 600px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: var(--accent-blue);
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            margin-top: 30px;
+            transition: 0.3s ease;
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
+        }
+
+        .btn:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(0, 242, 255, 0.7); }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 100px 10%;
+        }
+
+        .service-item {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            transition: 0.4s;
+        }
+
+        .service-item:hover { border-color: var(--accent-orange); transform: translateY(-10px); }
+
+        .service-item h3 { color: var(--accent-blue); margin-bottom: 15px; font-size: 1.5rem; }
+
+        .location-tag {
+            color: var(--accent-orange);
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        footer { padding: 50px 10%; border-top: 1px solid var(--glass-border); text-align: center; font-size: 0.9rem; opacity: 0.6; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="blob"></div>
+    <div class="blob" style="bottom: -100px; left: -100px; background: var(--accent-orange);"></div>
+
+    <nav class="glass-nav">
+        <div class="logo">OVERVUE</div>
+        <div style="font-size: 0.8rem; letter-spacing: 1px;">WAKE COUNTY, NC</div>
+    </nav>
+
+    <section class="hero">
+        <div class="location-tag">Professional Installment Only</div>
+        <h1>Precision <span>Glazing</span><br>Redefined.</h1>
+        <div class="glass-card">
+            <p style="font-size: 1.2rem; line-height: 1.6; opacity: 0.9;">
+                OVERVUE LLC delivers elite glass installation services across Wake County. We don't sell glass—we master the installment of it. From complex curtain walls to residential storefronts, we are the final step in architectural perfection.
+            </p>
+            <a href="mailto:contact@overvue.com" class="btn">REQUEST A BID</a>
+        </div>
+    </section>
+
+    <section class="services-grid">
+        <div class="service-item">
+            <h3>Commercial</h3>
+            <p>Expert installation of storefront systems, curtain walls, and interior office partitions for NC developers.</p>
+        </div>
+        <div class="service-item">
+            <h3>Residential</h3>
+            <p>Seamless fitting of custom shower enclosures, high-end mirrors, and architectural window systems.</p>
+        </div>
+        <div class="service-item">
+            <h3>Specialty</h3>
+            <p>Specialized heavy-glass handling and precision alignment for high-visibility luxury projects.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 OVERVUE, LLC. Serving Raleigh, Cary, and Wake Forest. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
